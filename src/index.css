@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --bg-base: #0F172A;
+  --bg-raised: #131E36;
+  --primary: #3B82F6;
+  --accent: #8B5CF6;
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+  --border: rgba(148, 163, 184, 0.14);
+}
+
+:root.light {
+  --bg-base: #F8FAFC;
+  --bg-raised: #E2E8F0;
+  --primary: #2563EB;
+  --accent: #7C3AED;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --border: rgba(15, 23, 42, 0.08);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-base);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-mono-tag {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+::selection {
+  background: var(--accent);
+  color: white;
+}
+
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(148,163,184,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148,163,184,0.06) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
