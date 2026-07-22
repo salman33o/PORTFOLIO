@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Download } from 'lucide-react';
+import ParticleBackground from './ParticleBackground';
 
 export default function Hero() {
   return (
@@ -7,6 +8,9 @@ export default function Hero() {
       id="top"
       className="relative min-h-screen flex items-center bg-grid overflow-hidden pt-28 pb-16 px-6"
     >
+      {/* Dynamic Particle Canvas */}
+      <ParticleBackground />
+
       {/* Ambient background glows */}
       <div className="absolute -top-40 -left-40 w-[30rem] h-[30rem] bg-[#3B82F6]/20 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute top-40 -right-32 w-[26rem] h-[26rem] bg-[#8B5CF6]/20 rounded-full blur-[120px] pointer-events-none" />
@@ -21,7 +25,7 @@ export default function Hero() {
           className="flex flex-col justify-center"
         >
           {/* Availability Pill */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-teal-500/30 bg-teal-500/10 text-teal-400 text-xs font-semibold w-fit mb-6 shadow-sm shadow-teal-500/10">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-teal-500/30 bg-teal-500/10 text-teal-400 text-xs font-semibold w-fit mb-6 shadow-sm shadow-teal-500/10">
             <span className="w-2 h-2 rounded-full bg-teal-400 animate-pulse" />
             Available for opportunities
           </div>
